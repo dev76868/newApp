@@ -4,10 +4,13 @@
 import express from 'express'
 const admobSSV = require('admob-rewarded-ads-ssv');
 
-
 const app = express(); // <-- Eksik olan bu satır
+app.use(express.static('public'));
 
 
+app.get('/', function (req, res) {
+  res.send('Hello from Express!');
+});
 
 app.get('/ssv-verify', (req, res) => {
   // Eğer debug istiyorsan ikinci parametreyi true yap
@@ -22,7 +25,5 @@ app.get('/ssv-verify', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+app.listen(3000, () => console.log('Server ready on port 3000.'));
+module.exports = app;
