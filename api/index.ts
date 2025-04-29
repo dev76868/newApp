@@ -1,11 +1,13 @@
-const express = require('express');
+//const express = require('express');
+//const admobSSV = require('admob-rewarded-ads-ssv');
+
+import express from 'express'
 const admobSSV = require('admob-rewarded-ads-ssv');
 
 
 const app = express(); // <-- Eksik olan bu satır
 
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.get('/ssv-verify', (req, res) => {
   // Eğer debug istiyorsan ikinci parametreyi true yap
@@ -21,4 +23,6 @@ app.get('/ssv-verify', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {console.log(`🚀 Server running on port ${PORT}`);});
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
