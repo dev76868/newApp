@@ -11,7 +11,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@vercel/postgres": "^0.7.2",
     "dotenv": "^16.4.1",
     "express": "^5.1.0",
     "express-admob-ssv": "^1.0.3"
