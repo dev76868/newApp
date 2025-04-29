@@ -3,6 +3,9 @@ const admobSSV = require('admob-rewarded-ads-ssv');
 
 const app = express(); // <-- Eksik olan bu satır
 
+
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.get('/ssv-verify', (req, res) => {
   // Eğer debug istiyorsan ikinci parametreyi true yap
   admobSSV.verify(req.url, true)
