@@ -1,6 +1,7 @@
 const express = require('express');
 const admobSSV = require('admob-rewarded-ads-ssv');
 
+
 const app = express(); // <-- Eksik olan bu satır
 
 
@@ -20,6 +21,4 @@ app.get('/ssv-verify', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+app.listen(PORT, () => {console.log(`🚀 Server running on port ${PORT}`);});
